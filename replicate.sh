@@ -93,6 +93,7 @@ done
 
 popd
 EOF
+chmod +x hack/coverage.sh
 
 #RUN glide slow
 chmod +x glide-slow
