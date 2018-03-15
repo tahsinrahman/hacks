@@ -99,5 +99,5 @@ chmod +x glide-slow
 glide slow
 
 #git add *
-#it commit -m 'Add travis yaml'
-#it push --set-upstream origin travis-tahsin
+#git commit -m 'Add travis yaml'
+#git push --set-upstream origin travis-tahsin
