@@ -8,7 +8,7 @@ cd $GOPATH/src/github.com/$1
 rm -rf $2
 git clone git@github.com:$1/$2.git
 cd $2
-git checkout -b travis-tahsin-1
+git checkout -b travis-tahsin-2
 
 #add converage.txt to the end of .gitignore
 echo "coverage.txt" >> .gitignore
@@ -101,4 +101,4 @@ glide slow
 
 git add --all
 git commit -m 'Add travis yaml'
-git push --set-upstream origin travis-tahsin-1
+git push --set-upstream origin travis-tahsin-2
