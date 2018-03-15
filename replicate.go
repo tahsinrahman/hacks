@@ -1,8 +1,8 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-	"log"
 	"os/exec"
 )
 
@@ -35,10 +35,14 @@ func main() {
 		for _, repoName := range orgName.repo {
 			fmt.Println(orgName.name, repoName)
 			cmd := exec.Command("./replicate.sh", orgName.name, repoName)
+			var stderr bytes.Buffer
+			cmd.Stderr = &stderr
 
 			err := cmd.Run()
 			if err != nil {
-				log.Fatal(err)
+				fmt.Println(err.Error())
+				fmt.Println(stderr.String())
+				return
 			}
 		}
 	}
