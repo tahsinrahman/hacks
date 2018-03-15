@@ -100,4 +100,8 @@ glide slow
 
 git add --all
 git commit -m 'Add travis yaml'
-git push --set-upstream origin travis-tahsin
+x=$(git push --set-upstream origin travis-tahsin)
+if [ ! x ]
+then
+    git push
+fi
